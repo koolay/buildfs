@@ -15,10 +15,16 @@ builds:
       - amd64
       - arm64
     mod_timestamp: '{{ .CommitTimestamp }}'
+    tags:
+      - containers_image_openpgp
+      - netgo
+      - exclude_graphdriver_devicemapper
+      - static
+      - osusergo
+      - exclude_graphdriver_btrfs
     flags:
       - -trimpath
       - -a
-      - -tags="remote exclude_graphdriver_btrfs btrfs_noversion exclude_graphdriver_devicemapper containers_image_openpgp"
     ldflags:
       - -s -w
 
